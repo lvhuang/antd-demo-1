@@ -4,16 +4,22 @@
         <div class="logo" />
         <a-menu theme="dark" mode="inline" :defaultSelectedKeys="['1']">
           <a-menu-item key="1">
+            <router-link to="/A">
             <a-icon type="user" />
             <span>nav 1</span>
+            </router-link>
           </a-menu-item>
           <a-menu-item key="2">
+            <router-link to="/B">
             <a-icon type="video-camera" />
             <span>nav 2</span>
+            </router-link>
           </a-menu-item>
           <a-menu-item key="3">
+            <router-link to="/C">
             <a-icon type="upload" />
             <span>nav 3</span>
+            </router-link>
           </a-menu-item>
         </a-menu>
       </a-layout-sider>
@@ -27,12 +33,13 @@
         </a-layout-header>
         <a-layout-content
           :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }"
-        >Content</a-layout-content>
+        ><router-view>Content</router-view></a-layout-content>
       </a-layout>
     </a-layout>
 </template>
 
 <script>
+
 export default {
   name: "ControlPanel",
   data() {
